@@ -1,1 +1,35 @@
-minha main teste
+public class Arvore(No Node) {
+
+}
+
+public void PercorrerElementos() {
+    if(node != null) {
+        System.out.print(Node.valor + "  ");
+        buscarPreOrdem(Node.esquerda);
+        buscarEmordem(Node.direita);
+    }
+}
+
+Public void BuscarPreOrdem (No node){
+    if (Node != null) {
+        System.out.print(Node.valor + "  ");
+        BuscarPreOrdem(Node.esquerda);
+        BuscarPreOrdem(Node.direita);
+    }
+}
+
+Public void BuscarEmOrdem (No node){
+    if (Node != null) {
+        BuscarEmOrdem(Node.esquerda);
+        System.out.print(Node.valor + "  ");
+        BuscarEmOrdem(Node.direita);
+    }
+}
+
+public void BuscarPosOrdem(No Node) {
+    if (Node != null) {
+        BuscarPosOrdem(Node.esquerda);
+        BuscarPosOrdem(Node.direita);
+        System.out.print(Node.valor + " );
+    }
+}
