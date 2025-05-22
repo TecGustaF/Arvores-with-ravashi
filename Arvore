@@ -1,0 +1,11 @@
+public class Arvore(No Node) {
+
+}
+public void PercorrerElementos() {
+    if(node != null) {
+        System.out.println(Node.valor + " )
+        buscar pre ordem(Node.esquerda);
+        buscar em ordem(Node.direita);
+    }
+
+}
