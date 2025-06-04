@@ -1,6 +1,6 @@
 package arvore;
 
-import No.java.;
+import no.No;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -10,6 +10,8 @@ public class Arvore {
     public Arvore() {
         raiz = null;
     }
+
+    //  MÉTODOS COM RECURSO (Queue/fila - busca por nível com LinkedList)
 
     public int contarNos(No node) {
         if (node == null) return 0;
@@ -60,4 +62,40 @@ public class Arvore {
             if (atual.direita != null) fila.add(atual.direita);
         }
     }
+
+    // MÉTODOS SEM RECURSO EXTERNO (só recursividade)
+
+    public void buscaPorNivelSemRecurso(No node) {
+        int h = altura(node);
+        for (int i = 1; i <= h; i++) {
+            imprimirNivel(node, i);
+        }
+    }
+
+    public int altura(No node) {
+        if (node == null) return 0;
+        int esq = altura(node.esquerda);
+        int dir = altura(node.direita);
+        return 1 + Math.max(esq, dir);
+    }
+
+    public void imprimirNivel(No node, int nivel) {
+        if (node == null) return;
+        if (nivel == 1) {
+            System.out.print(node.valor + " ");
+        } else {
+            imprimirNivel(node.esquerda, nivel - 1);
+            imprimirNivel(node.direita, nivel - 1);
+        }
+    }
+    
+    // teste das AVL 
+    
+    busca pre ordem
+    
+    
+    
+    
+    
 }
+
